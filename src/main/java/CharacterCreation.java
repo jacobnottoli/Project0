@@ -2,18 +2,17 @@ import java.util.Scanner;
 
 public class CharacterCreation {
     public static Scanner in = new Scanner(System.in);
-    public static void createCharacter() {
+    public static void createCharacter(Player p) {
 
-        Player player = new Player();
         System.out.println("Hello adventurer! What is your name?");
-        player.setName(in.nextLine());
-        System.out.println("Welcome to the world of Ezura, " + player.getName() + "! Your journey begins in the city of Colfax.\n \nQueen Elaine wants to commission someone to go slay the Dragon that rests in a cave at the base of the Hisuain Mountains.");
+        p.setName(in.nextLine());
+        System.out.println("Welcome to the world of Ezura, " + p.getName() + "! Your journey begins in the city of Colfax.\n \nQueen Elaine wants to commission someone to go slay the Dragon that rests in a cave at the base of the Hisuain Mountains.");
         System.out.println("\nLet's start with your class...\n \nAre you a Warrior or a Mage?");
         System.out.println("1. Mage\n2. Warrior");
         if (in.nextInt()==1) {
-            CharacterCreation.createMage(player);
+            CharacterCreation.createMage(p);
         } else {
-            CharacterCreation.createWarrior(player);
+            CharacterCreation.createWarrior(p);
         }
 }
 
