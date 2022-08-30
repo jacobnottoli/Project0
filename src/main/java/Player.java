@@ -5,6 +5,13 @@ public class Player {
     String clas;
     int dmg;
     int heal;
+    int addToRoll;
+    int addToDMG;
+
+    public Player() {
+        addToRoll = 0;
+        addToDMG = 0;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -53,5 +60,14 @@ public class Player {
     public int getHeal() {
         return this.heal;
     }
+
+    public void setAddToRoll(int addToRoll) {this.addToRoll=addToRoll;}
+
+    public int getAddToRoll() {return this.addToRoll;}
+
+    public void setAddToDMG(int addToDMG) {this.addToDMG=addToDMG;}
+
+    public int getAddToDMG() {return this.addToDMG;}
 }
+
 
