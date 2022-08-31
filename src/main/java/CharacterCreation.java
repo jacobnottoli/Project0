@@ -14,6 +14,7 @@ public class CharacterCreation {
         } else {
             CharacterCreation.createWarrior(p);
         }
+        System.out.println("After careful consideration, Queen Elaine has chosen you, " + p.getName()+ ", to be her champion!\n\nBeware, however. The road to the Dragon's Lair can be dangerous. Be sure to keep yourself vigilant from potential threats...\n\nGood Luck!");
 }
 
     public static void createMage(Player p){
