@@ -7,16 +7,22 @@ public class CharacterCreation {
         System.out.println("Hello adventurer! What is your name?");
         p.setName(in.nextLine());
         System.out.println("Welcome to the world of Ezura, " + p.getName() + "! Your journey begins in the city of Colfax.\n \nQueen Elaine wants to commission someone to go slay the Dragon that rests in a cave at the base of the Hisuain Mountains.");
+        System.out.println("After careful consideration, Queen Elaine has chosen you, " + p.getName()+ ", to be her champion!\n\nBeware, however. The road to the Dragon's Lair can be dangerous. Be sure to keep yourself vigilant from potential threats...\n\nGood Luck!");
+        CharacterCreation.pickClass(p);
+}
+    public static void pickClass(Player p ){
         System.out.println("\nLet's start with your class...\n \nAre you a Warrior or a Mage?");
         System.out.println("1. Mage\n2. Warrior");
-        if (in.nextInt()==1) {
+        int pick = in.nextInt();
+        if (pick==1) {
             CharacterCreation.createMage(p);
-        } else {
+        } else if (pick==2){
             CharacterCreation.createWarrior(p);
+        } else {
+            System.out.println("Invalid Input!");
+            CharacterCreation.pickClass(p);
         }
-        System.out.println("After careful consideration, Queen Elaine has chosen you, " + p.getName()+ ", to be her champion!\n\nBeware, however. The road to the Dragon's Lair can be dangerous. Be sure to keep yourself vigilant from potential threats...\n\nGood Luck!");
-}
-
+    }
     public static void createMage(Player p){
         System.out.println("Ahhh... An adventurer of the arcane!\nWhat type of mage are you?");
         System.out.println("1. Fire\n2. Frost");
