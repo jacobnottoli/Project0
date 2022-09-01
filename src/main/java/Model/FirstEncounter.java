@@ -21,7 +21,7 @@ public class FirstEncounter {
         Monster m = ms.createMonster(ms.chooseMonster(roll));
         System.out.println("Uh oh! While travelling to the Dragon's Lair, you encountered a " + m.getName() + "! They want to fight. Get ready!");
         Fight.doFight(p,m);
-
+        System.out.println("After fighting the " + m.getName() + " you notice that it was wearing a ring. Let's see what type of ring it is.");
     }
 
 

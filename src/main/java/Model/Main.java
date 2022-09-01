@@ -9,6 +9,7 @@ public class Main {
         Player player = new Player();
         CharacterCreation.createCharacter(player);
         FirstEncounter.Encounter(player);
+        SecondEncounter.Encounter(player);
     }
 
 }
