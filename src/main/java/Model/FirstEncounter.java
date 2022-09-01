@@ -19,7 +19,8 @@ public class FirstEncounter {
         System.out.println("You rolled a: " + roll +"!");
         MonsterService ms = new MonsterService();
         Monster m = ms.createMonster(ms.chooseMonster(roll));
-        System.out.println("Uh oh! While travelling to the Dragon's Lair, you encountered a  " + m.getName() + "! They want to fight. Get ready!");
+        System.out.println("Uh oh! While travelling to the Dragon's Lair, you encountered a " + m.getName() + "! They want to fight. Get ready!");
+        Fight.doFight(p,m);
 
     }
 
