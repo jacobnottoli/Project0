@@ -1,3 +1,8 @@
+package Service;
+
+import Model.Player;
+import Model.Roll;
+
 import java.util.Scanner;
 
 public class CharacterCreation {
@@ -118,7 +123,7 @@ public class CharacterCreation {
     public static void hpTW(Player p) {
         CharacterCreation.printRollHealth();
         if (in.nextInt()==1) {
-            p.setHealth(30+Roll.d6());
+            p.setHealth(30+ Roll.d6());
         } else {
             System.out.println("\nInvalid Input! Press 1 to roll.");
             CharacterCreation.hpTW(p);

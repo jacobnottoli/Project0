@@ -1,5 +1,10 @@
+package Model;
+
+import Model.Player;
+import Model.Roll;
+
 public class Damage {
-    public int addDamage(int d, Player p) {
+    public static int addDamage(int d, Player p) {
         if (d == 12) {
             return Roll.d12() + p.addToDMG;
         } else if (d == 10) {
