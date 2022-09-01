@@ -9,7 +9,13 @@ public class Main {
         Player player = new Player();
         CharacterCreation.createCharacter(player);
         FirstEncounter.Encounter(player);
-        SecondEncounter.Encounter(player);
+        if (player.getHealth() > 0) {
+            SecondEncounter.Encounter(player);
+        }
+        if (player.getHealth() > 0) {
+            ThirdEncounter.Encounter(player);
+        }
+
     }
 
 }
